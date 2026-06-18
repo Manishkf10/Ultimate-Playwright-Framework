@@ -1,0 +1,29 @@
+{
+  "name": "project1rahul",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test API_Test1.spec.js --headed",
+    "regression": "npx playwright test",
+    "webTest": "npx playwright test --grep @web",
+    "APiTest": "npx playwright test --grep @api",
+    "safariTest": "npx playwright test --config playwright.myConfig.js --project=safariTest",
+    "cucumberTest":"npx cucumber-js --parallel 2 --format html:myCucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.2",
+    "allure-playwright": "^3.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^13.0.0",
+    "exceljs": "^4.4.0"
+  }
+}

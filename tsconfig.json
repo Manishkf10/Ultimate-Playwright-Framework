@@ -1,0 +1,15 @@
+//gives instruction how to conver ts to js under that rule are define
+
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "node16",
+    "moduleResolution": "node16",
+    "types": ["node"],
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": false
+  }
+}
