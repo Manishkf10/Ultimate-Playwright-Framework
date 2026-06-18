@@ -6,6 +6,8 @@ const { trace } = require("node:console");
 const config={
   testDir: './tests',//directory of tests which going to run
   timeout:40*1000, //This is a base timeout for all tests
+  workers:1,
+  retries: 2,   // if test failed retry that one 2 times
   expect:{        //this for assertions timeout
     timeout:40*1000
   },
