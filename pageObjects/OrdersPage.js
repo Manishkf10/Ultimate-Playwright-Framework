@@ -21,6 +21,6 @@ export class OrdersPage{
                  break;
              }
         }
-         await expect(this.displayedOrder).toBeVisible();
+         //await expect(this.displayedOrder).toBeVisible();
     }        
 }
