@@ -1,8 +1,8 @@
 # 🎭 Ultimate Playwright Framework
 
-A scalable, enterprise-grade test automation framework demonstrating modern QA automation practices using **Playwright**, **TypeScript**, **JavaScript**, **Cucumber BDD**, **API Testing**, **CI/CD**, and **Page Object Model** design patterns.
+A scalable, enterprise-grade test automation framework demonstrating modern QA automation practices using **Playwright**, **TypeScript**, **JavaScript**, **Cucumber BDD**, **API Testing**, **CI/CD**.
 
-> This project is intended for **learning and showcasing automation engineering skills** rather than fulfilling a specific business requirement. It demonstrates the ability to design, implement, maintain, and scale enterprise-level test automation frameworks.
+> This project is intended for **learning and showcasing automation engineering skills** rather than fulfilling a specific business requirement. It demonstrates the ability to design, implement, maintain, and scale test automation frameworks.
 
 ---
 
@@ -126,6 +126,7 @@ project-root/
 │   └── workflows/                  # GitHub Actions workflows
 │
 ├── playwright.config.js            # Playwright configuration
+├── playwright.myConfig.js          # Custom Playwright configuration
 ├── cucumber.js                     # Cucumber configuration
 ├── package.json                    # Project dependencies
 ├── tsconfig.json                   # TypeScript configuration
@@ -188,24 +189,38 @@ npm install
 ### Running Tests
 
 ```bash
-# Run all Playwright tests
-npm run test
+# Run all Playwright tests (headless mode)
+npm run regression
 
 # Run specific test file
-npm run test tests/[test-file-name].spec.js
+npx playwright test [test-file-name].spec.js
 
-# Run Cucumber BDD tests
-npm run test:bdd
+# Run API tests
+npm run APiTest
+
+# Run web tests
+npm run webTest
 
 # Run tests in headed mode
-npm run test:headed
+npm run test
 
-# Run tests in parallel
-npm run test:parallel
+# Run Safari tests
+npm run safariTest
 
-# Generate Playwright report
-npm run report
+# Run Cucumber BDD tests with HTML reporting
+npm run cucumberTest
 ```
+
+### Available Scripts
+
+| Script | Command | Description |
+|--------|---------|---|
+| `npm run regression` | `npx playwright test` | Run all Playwright tests in headless mode |
+| `npm run test` | `npx playwright test API_Test1.spec.js --headed` | Run API test in headed mode |
+| `npm run APiTest` | `npx playwright test --grep @api` | Run tests tagged with @api |
+| `npm run webTest` | `npx playwright test --grep @web` | Run tests tagged with @web |
+| `npm run safariTest` | `npx playwright test --config playwright.myConfig.js --project=safariTest` | Run Safari-specific tests |
+| `npm run cucumberTest` | `npx cucumber-js --parallel 2 --format html:myCucumber-report.html` | Run Cucumber BDD tests with HTML report |
 
 ---
 
@@ -232,7 +247,7 @@ npm run report
 
 ## 📝 Purpose of This Project
 
-This project does not target a specific business domain. Instead, it serves as a **demonstration of automation framework development skills** and **modern QA engineering practices**. It showcases the ability to build, maintain, and scale enterprise-grade automation solutions using industry-standard tools and frameworks.
+This project does not target a specific business domain. Instead, it serves as a **demonstration of automation framework development skills** and **modern QA engineering practices**. It showcases the ability to design, implement, and maintain enterprise-grade test automation frameworks.
 
 ---
 
