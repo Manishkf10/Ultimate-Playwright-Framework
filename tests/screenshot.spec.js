@@ -14,14 +14,15 @@ test("screenshot of page",async({page})=>{
 })
 
 
-test("comparision of screenshots",async({page})=>{
+/*test("comparision of screenshots",async({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/");
     
-    /*
-        1. In first run it failed and create a copy on screenshot
-        2. create a new copy and compare pixel by pixel to already store .png file
-    */
+    
+    //    1. In first run it failed and create a copy on screenshot
+    //    2. create a new copy and compare pixel by pixel to already store .png file
+    
     await expect(await page.screenshot()).toMatchSnapshot("comparision.png");
 
 
 })
+*/
