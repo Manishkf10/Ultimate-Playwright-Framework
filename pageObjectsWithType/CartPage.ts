@@ -13,6 +13,7 @@ export class CartPage{
 
    async validateProductInCart(myProduct:string){
          let product=this.page.locator(`h3:has-text('${myProduct}')`);
+          await expect(product).toBeVisible({ timeout: 40000 });
         await expect(product).toHaveText(myProduct);
         await this.checkOutBtn.click();
  
